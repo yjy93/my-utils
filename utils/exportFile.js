@@ -9,7 +9,6 @@
 import {randomHash} from './random'
 
 /**
- *
  * @param result: 元数据, 必选,    根据后端请求回来的二进制数据流结果
  * @param options: 配置选项,可选, 文件相关参数配置
  */

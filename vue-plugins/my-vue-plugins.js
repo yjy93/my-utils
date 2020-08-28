@@ -11,10 +11,12 @@ import {exportFile, downloadFile} from '../utils/exportFile'
 export default {
     install(Vue) {
         Object.defineProperties(Vue.prototype, {
+            // 下载文件
             $downloadFile: {
                 writable: false,
                 value: downloadFile
             },
+            // 导出文件
             $exportFile: {
                 writable: false,
                 value: exportFile
