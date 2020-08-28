@@ -1,10 +1,12 @@
 /**
-* @author: 半醉半醒半浮生
-* @age: 永远18岁的美少年
-* @Email： Genejob@163.com
-* @date: 2020-08-28 10:45:11
-* @description:
-*/
+ * @author: 半醉半醒半浮生
+ * @age: 永远18岁的美少年
+ * @Email： Genejob@163.com
+ * @date: 2020-08-28 10:45:11
+ * @description:
+ */
+
+import {randomHash} from './random'
 
 /**
  *
@@ -22,7 +24,7 @@ export function exportFile(result, options = {}) {
     a.href = URL.createObjectURL(blob)
 
     // 如果有指定文件名称,则下载对应的文件名称, 没有指定文件名称,则由浏览器自动生成随机文件名
-    filename ? a.download = filename : a.download
+    a.download = filename ? filename : randomHash(16)
     document.body.appendChild(a)
     a.click() // 触发click 事件下载文件
     document.body.removeChild(a) // 释放 a 链接对象
